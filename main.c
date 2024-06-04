@@ -110,6 +110,17 @@ data pop(Node**top)
 
     return d;
 }
+
+void deleteStack(Node** stackTop)
+{
+    Node* aux;
+    while(*stackTop != NULL)
+        {
+            aux = *top;
+            *top = (*top)->next;
+            free(aux);
+        }
+}
 int main()
 {
     Node* stackTop = NULL;
